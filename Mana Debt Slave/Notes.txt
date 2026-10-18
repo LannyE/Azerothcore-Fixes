@@ -1,0 +1,10 @@
+There are 4 creatures 19656 one inside the forge and one in each tower.  
+
+The 40490 (Resonant Feedback) is targeted on the three in the towers
+towers:160930,160927,160928
+inside forge:160929
+
+Porting Blueprint for AzerothCore SmartAITo convert this cleanly into AzerothCore, you do not need a relay script. 
+
+You can anchor the entire script chain straight onto the Invisible Location Trigger (19656) using a timed action list.  
+smart_scripts for Entry 19656:Event: SMART_EVENT_ACTION_LINKED or an OOC timer indicating the event started.Action: SMART_ACTION_CALL_TIMED_ACTION_LIST pointing to a new script ID.The Timed Action List (smart_scripts with source_type = 9):Line 1 (Time: 1s): SMART_ACTION_SUMMON_CREATURE $\rightarrow$ Summon Entry 23154 at Coord 1.  Line 2 (Time: 1s): SMART_ACTION_SUMMON_CREATURE $\rightarrow$ Summon Entry 23154 at Coord 2.  Line 3 (Time: 1s): SMART_ACTION_SUMMON_CREATURE $\rightarrow$ Summon Entry 23154 at Coord 3.  Line 4 (Time: 4s): SMART_ACTION_TALK $\rightarrow$ Target closest creature 22243 to say text.  Line 5 (Time: 301s): SMART_ACTION_TALK $\rightarrow$ Target closest creature 22243 to say text 2.  Line 6 (Time: 301s): SMART_ACTION_CAST $\rightarrow$ Cast Spell 40490 (Resonant Feedback).  Line 7 (Time: 301s): SMART_ACTION_SEND_AI_EVENT $\rightarrow$ Send event to nearby slaves to trigger their run-away-and-despawn scripts.  

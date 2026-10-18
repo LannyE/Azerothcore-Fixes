@@ -1,0 +1,3 @@
+Fix Thorsen path around flight master - done
+Move black panther and tiger out of Thorsen path
+Test Merle event

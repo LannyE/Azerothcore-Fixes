@@ -1,0 +1,1 @@
+UPDATE `smart_scripts` SET `link` = 0 WHERE `entryorguid` IN (26202) AND `source_type` = 0 AND `id` = 0;

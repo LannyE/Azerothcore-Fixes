@@ -1,0 +1,1 @@
+UPDATE `creature` SET `MovementType` = 2 where guid in (83168); -- 2

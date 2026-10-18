@@ -1,0 +1,5 @@
+If the summoned unit is already summoned before agro like a Succubus and it doesn't attack when attacking the invoker then you need to remove the 2 (Civilian) from the creature_template flags_extra field
+
+
+If it doesn't attack when summoned during agro then a smart script is needed example:
+(7767,0,1,0,54,0,100,0,0,0,0,0,0,0,49,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,'Witherbark Felhunter - Just Summoned - Attack Player');

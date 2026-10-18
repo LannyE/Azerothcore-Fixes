@@ -1,0 +1,1 @@
+By default, the phases are fully progressed, meaning the Isle of Quel'danas is in its final stage with all subphases completed. Similarly, all Sunwell Plateau gates are open. This state is stored in acore_character.world_state and can be removed to allow blizzlike progression.

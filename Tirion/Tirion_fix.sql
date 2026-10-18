@@ -1,0 +1,1 @@
+UPDATE `creature` SET `orientation`=1.81754 WHERE `guid`= 53837; -- 6.03506

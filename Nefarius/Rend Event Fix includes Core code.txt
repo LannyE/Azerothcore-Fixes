@@ -1,0 +1,3 @@
+Implement Rend Event correctly with Nefarius in upper blackrock spire.
+
+Path for Blackrock Iron Guard 137986 around stands and by BWL doorway - fixed

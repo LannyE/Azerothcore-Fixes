@@ -1,0 +1,1 @@
+UPDATE `creature` SET `MovementType`=0 where guid in (83135,83136,83137,83138,83139,83163,83164,83165,83166); - 2

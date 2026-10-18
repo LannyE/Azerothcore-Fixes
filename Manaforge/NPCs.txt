@@ -1,0 +1,19 @@
+Engineer
+67284,67283,67282,67296,67281,67295,67294                     67285
+Master 
+67381,67376
+Bloodwarder
+67329,67328
+Captain
+69670
+Overseer
+72389 -shoudl path to doorway and back
+
+Magister in wrong spots
+67356
+
+
+All Astromancers should waypoint
+
+captain that should waypoint
+69669,69671

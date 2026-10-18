@@ -1,0 +1,4 @@
+saul's smart scripts was modified with the implementation of L70ETC event 8-6-24
+
+the Perry Gatner event was giving errors about event already ended due to the changes made had Saul taking alot longer to yell his lines plus he yells them multiple times.
+I increase the event time in the game_event table ID 86 to 25 minutes duration to fix this. 

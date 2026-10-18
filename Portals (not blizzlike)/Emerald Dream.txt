@@ -1,0 +1,4 @@
+Zone 1 Emerald Forest = Seredane, Hinterlands
+Zone 2 Verdant Fields = Twilight Grove, Duskwood
+Zone 3 = Dream Bough, Feralas
+Zone 4 = Bough Shadow, Ashenvale
