@@ -1,8 +1,6 @@
 /*
--- Query: SELECT * FROM acore_world.waypoint_data where id in (584370)
-LIMIT 0, 1000
-
--- Date: 2023-11-28 09:29
+- Add Arator RP at Honor Hold 12-1-23
+- Patched to work with new commit adding Infantry RP with Sid 10-18-26
 */
 UPDATE `creature_template` SET `AIName` = "SmartAI" WHERE `entry` in (16886);
 -- UPDATE `creature_template` SET `mechanic_immune_mask` = 16 WHERE  `entry` IN (16886); -- Arator immune to fear - Infernal
@@ -14,7 +12,7 @@ UPDATE `creature_addon` SET `path_id` = 0 WHERE `guid` in (58437);
 UPDATE `creature_template` SET `AIName` = "SmartAI" WHERE `entry` in (16825);
 
 DELETE FROM `creature_text` WHERE `CreatureID` IN (16886,16825);
-DELETE FROM `creature_text` WHERE `CreatureID` IN (16826) and `GroupID` IN (0);
+DELETE FROM `creature_text` WHERE `CreatureID` IN (16826) and `GroupID` IN (2);
 DELETE FROM `creature_text` WHERE `CreatureID` IN (16819) and `GroupID` IN (3,4,5);
 INSERT INTO `creature_text` (`CreatureID`,`GroupID`,`ID`,`Text`,`Type`,`Language`,`Probability`,`Emote`,`Duration`,`Sound`,`BroadcastTextId`,`TextRange`,`comment`) VALUES 
 (16886,0,0,'Aye, Commander; but I am little no more. I have come to find my father. Have you any news as to his whereabouts? I know that he still lives. I have seen it in my dreams...',12,0,100,1,0,0,12812,0,'Arator the Redeemer'),
@@ -36,7 +34,7 @@ INSERT INTO `creature_text` (`CreatureID`,`GroupID`,`ID`,`Text`,`Type`,`Language
 (16825,5,0,'%s begins to sob.',16,0,100,18,0,0,13316,0,'Father Malgor Devidicus'),
 (16825,6,0,'Quickly, Sid. Fill my tankard. Make the memories fade...',12,0,100,18,0,0,13317,0,'Father Malgor Devidicus'),
 
-(16826,0,0,'Oh brother... Listen, he\'s gonna be here crying like a baby for another five hours. If you\'re really the son of Turalyon, go speak with Trollbane. He\'s in the keep - top floor.',12,0,100,1,0,0,13318,0,'Sid Limbardi');
+(16826,2,0,'Oh brother... Listen, he\'s gonna be here crying like a baby for another five hours. If you\'re really the son of Turalyon, go speak with Trollbane. He\'s in the keep - top floor.',12,0,100,1,0,0,13318,0,'Sid Limbardi');
 
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (16886,1688600,1688601,16825,1682500,1681900);
@@ -100,7 +98,7 @@ INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type
 (1682500,9,10,0,0,0,100,0,11000,11000,0,0,0,45,1,1,0,0,0,0,19,16826,0,0,0,0,0,0,0,'Father Malgor Devidicus - On Script - Set Data on Sid Limbardi'),
 (1682500,9,11,0,0,0,100,0,10000,10000,0,0,0,82,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,'Father Malgor Devidicus - On Script - Add Npc Flag Questgiver'),
 
-(16826,0,2,3,38,0,100,0,1,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,'Sid Limbardi - On Data Set - Say Line 0'),
+(16826,0,2,3,38,0,100,0,1,1,0,0,0,1,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,'Sid Limbardi - On Data Set - Say Line 2'),
 (16826,0,3,4,61,0,100,0,0,0,0,0,0,83,66435,0,0,0,0,0,1,0,0,0,0,0,0,0,0,'Sid Limbardi - On Data Set - Remove InnKeeper/Vendor/Quest flags'),
 (16826,0,4,0,61,0,100,0,0,0,0,0,0,66,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0.0099,'Sid Limbardi - On Data Set - Set Orientation'),
 (16826,0,5,6,38,0,100,0,1,2,0,0,0,66,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,'Sid Limbardi - On Data Set - Set Orientation'),

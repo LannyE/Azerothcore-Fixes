@@ -10,7 +10,7 @@ UPDATE `creature_addon` SET `path_id` = 584370 WHERE `guid` in (58437);
 UPDATE `creature_template` SET `AIName` = "" WHERE `entry` in (16825);
 
 DELETE FROM `creature_text` WHERE `CreatureID` IN (16886,16825);
-DELETE FROM `creature_text` WHERE `CreatureID` IN (16826) and `GroupID` IN (0);
+DELETE FROM `creature_text` WHERE `CreatureID` IN (16826) and `GroupID` IN (2);
 DELETE FROM `creature_text` WHERE `CreatureID` IN (16819) and `GroupID` IN (3,4,5);
 
 DELETE FROM `smart_scripts` WHERE `entryorguid` IN (16886,1688600,16825,1682500);
